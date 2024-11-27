@@ -1,0 +1,25 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    
+    <ActionBar>
+        <Label text="gradeScan" />
+    </ActionBar>
+<ScrollView>
+    <StackLayout padding="10">
+    <!-- Capture Image Button -->
+    <Button text="Capture Image" tap="{{ captureImage }}" />
+    <Button text="Select Image from Gallery" tap="{{ selectImageFromGallery }}" marginTop="10" />
+
+    <!-- Display Captured Image -->
+    <Image src="{{ capturedImage }}" stretch="aspectFit" marginTop="20" />
+    
+    <!-- Add Perform OCR Button -->
+    <Button text="Perform OCR" tap="{{ performOCR }}" marginTop="10" />
+
+    <!-- Display Recognized Text -->
+    <Label text="Recognized Text:" marginTop="20" fontWeight="Bold" />
+    <Label text="{{ recognizedText }}" textWrap="true" marginTop="5" />
+
+  </StackLayout>
+</ScrollView>
+
+</Page>
